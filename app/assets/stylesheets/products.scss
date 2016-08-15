@@ -14,7 +14,7 @@ h3 {
 }
 
 .product-container {
-    
+    border-bottom: 1px solid #bcbcbc;
 }
 
 .product-actions {
@@ -26,8 +26,8 @@ h3 {
 .product-image {
     display: inline-block;
     width: 250px;
-    height: 175px;
-    border: 2px solid black;
+    height: 167.5px;
+    border: 2px solid #bcbcbc;
     margin: 2px;
     float: left;
 }
@@ -54,4 +54,10 @@ h3 {
 
 .product-row {
    
+}
+
+.product-details {
+    display: block;
+    float: right;
+    margin-top: 5px;
 }

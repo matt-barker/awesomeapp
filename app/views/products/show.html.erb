@@ -7,12 +7,23 @@
   
 </p>
 <p class="product-image-large">
-  <%= @product.image_url %>
+  
+  <%= image_tag(@product.image_url, class: "img-responsive") %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @product.description %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @product.colour %>
+</p>
+
+<p>
+  <strong>Price: £</strong>
+  <%= @product.price %>
 </p>
 
 <p>
