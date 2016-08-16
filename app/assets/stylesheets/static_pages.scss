@@ -17,3 +17,20 @@ h2 {
 footer {
     border-top: solid 1px #000;
 }
+
+.navbar {
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.nav li a {
+    font-size: 1.2em;
+    
+}
+
+.navbar-toggle {
+    border: 1px solid black;
+}
+
+.navbar-toggle .icon-bar {
+    background: black;
+}
