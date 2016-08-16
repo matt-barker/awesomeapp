@@ -24,12 +24,20 @@ h3 {
 }
 
 .product-image {
+    background: #fff;
+    text-align: center;
     display: inline-block;
     width: 250px;
     height: 167.5px;
     border: 2px solid #bcbcbc;
     margin: 2px;
     float: left;
+}
+
+.img-small {
+    max-height: 160px;
+    max-width: 245px;
+    margin: 0 auto;
 }
 
 .product-description {
