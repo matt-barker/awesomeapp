@@ -1,4 +1,4 @@
-<h2>Featured Products</h2>
+<h1>Featured Products</h1>
 
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -17,7 +17,7 @@
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
     <div class="item <%= " active" if product == @products.first %>">
-      <%= image_tag(product.image_url, class: "img-responsive img-featured") %>
+      <%= link_to image_tag(product.image_url, class: "img-responsive img-featured"), product %>
       <div class="carousel-caption">
         <%= product.name %>
       </div>
