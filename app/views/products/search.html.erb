@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%=  @search_term.blank? ? "All products" : "Products matching '#{@search_term}'" %></h1>
+  <div class="products-row">
+    <%= render @products %>
+  </div>    

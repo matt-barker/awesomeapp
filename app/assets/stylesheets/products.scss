@@ -61,12 +61,20 @@ h3 {
     border: 2px solid #bcbcbc;
 }
 
-.product-row {
-   
+.price-input {
+    width: 30%;
 }
 
 .product-details {
     display: block;
     float: right;
     margin-top: 5px;
+}
+
+#product_description {
+    height: 200px;
+}
+
+.btn-default {
+    margin: 5px, auto;
 }

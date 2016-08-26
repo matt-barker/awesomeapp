@@ -6,4 +6,6 @@ class StaticPagesController < ApplicationController
     @featured_product = Product.first
     @products = Product.all
   end
+  
+  
 end
