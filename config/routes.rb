@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   get 'products/search'
   
+  post 'static_pages/thank_you'
+  
   resources :products
   resources :orders, only: [:index, :show, :create, :destroy]
   
