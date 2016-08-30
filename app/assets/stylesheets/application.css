@@ -16,4 +16,11 @@
  
  footer {
      clear: both;
+     margin: 0 auto;
+     max-width: 1400px;
+ }
+ 
+ body {
+  font-family: 'Ubuntu', sans-serif;
+  border-right: 1px solid #999;
  }

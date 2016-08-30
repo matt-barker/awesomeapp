@@ -2,6 +2,7 @@
     max-width: 1400px;
     margin-bottom: 20px;
     clear: both;
+    background: #f8f8f8;
 }
 
 body {
@@ -10,14 +11,22 @@ body {
     background: #fff;
 }
 
-h1 {
-    color: #666;
-    font-family: 'arial','sans serif';
+h1, h2, h3 {
+    color: #B97E29;
     text-align: center;
 }
 
+h1 {
+    font-size: 2.5em;
+}
+
 h2 {
-    text-align: center;
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin: 20px 0;
 }
 
 footer {
@@ -26,6 +35,12 @@ footer {
 
 .navbar {
     border: none;
+    margin-bottom: 0;
+   
+}
+
+.navbar-nav {
+    margin-right: 5px;
 }
 
 .nav li a {
@@ -34,11 +49,11 @@ footer {
 }
 
 .navbar-toggle {
-    border: 1px solid black;
+    border: 1px solid #fff;
 }
 
 .navbar-toggle .icon-bar {
-    background: black;
+    background: #fff;
 }
 
 .img-featured {
@@ -54,4 +69,18 @@ footer {
 
 .carousel-caption {
     background: rgba(0,0,0,0.3);
+}
+
+.btn-group-user {
+    margin: 8px 0;
+    float: right;
+}
+
+.hmenu {
+    background: #2980b9;
+    
+}
+
+.hmenu a, .hmenu a:visited {
+    color: #fff;
 }
