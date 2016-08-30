@@ -38,14 +38,14 @@
           <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
         </div>
         
-        <%= submit_tag("Submit", class: "btn btn-default") %>
+        <%= submit_tag("Go", class: "btn btn-default") %>
       <% end %>
     </div>
   </div>
 </nav>
-
+<div class="container">
 <%= yield %>
-
+</div>
 <footer>
   &copy; 2016 Matt Barker
 </footer>

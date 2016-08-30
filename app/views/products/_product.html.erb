@@ -1,10 +1,12 @@
-<div class="col-sm-12 col-md-6 product-container">
+<div class="col-sm-12 col-md-6 col-lg-4">
+  <div class="product-container">
     <h3><%= product.name %></h3>
     <div class="product-image">
-      <%= image_tag(product.image_url, class: "img-responsive img-small") %>
+      <%= link_to product do %>
+         <%= image_tag(product.image_url, class: "img-responsive img-small") %>
+      <% end %>
     </div>
     <div class="product-description">
-      <%= product.description %><br>
         <span class="product-details"><strong>Colour:</strong>
         <%= product.colour %>
         <strong>Price: </strong>
@@ -13,5 +15,6 @@
     <div class="product-actions"><%= link_to 'Show', product %> | <%= link_to 'Edit', 
       edit_product_path(product) %> | <%= link_to 'Destroy', product, 
       method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
     </div>
 </div>

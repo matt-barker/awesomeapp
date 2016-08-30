@@ -1,5 +1,11 @@
+.container {
+    max-width: 1400px;
+    margin-bottom: 20px;
+    clear: both;
+}
+
 body {
-    max-width: 1200px;
+    
     margin: 0 auto;
     background: #fff;
 }
@@ -19,7 +25,7 @@ footer {
 }
 
 .navbar {
-    border-bottom: 1px solid #bcbcbc;
+    border: none;
 }
 
 .nav li a {
