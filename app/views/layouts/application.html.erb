@@ -34,22 +34,26 @@
         <li><%= link_to "Contact", static_pages_contact_path %></li>
         <li><%= link_to "About", static_pages_about_path %></li>
       </ul>
-      
-       <%= form_tag("/products/search", method: "get", class: "navbar-form navbar-right", role: "search") do %>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="glyphicon glyphicon-user"></i><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu hmenu">
+              <li><%= render 'devise/menu/registration_items' %></li>
+              <li><%= render 'devise/menu/login_items' %></li>
+            </ul>
+        </li>
+        <li>
+           <%= form_tag("/products/search", method: "get", class: "navbar-form navbar-right", role: "search") do %>
         <div class="form-group">
           <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
         </div>
         <%= submit_tag("Go", class: "btn btn-default") %>
       <% end %>
-      <div class="btn-group btn-group-user">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="glyphicon glyphicon-user"></i> <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu hmenu">
-              <li><%= render 'devise/menu/registration_items' %></li>
-              <li><%= render 'devise/menu/login_items' %></li>
-            </ul>
-          </div>
+        </li>
+      </ul>
+       
     </div>
   </div>
 </nav>
