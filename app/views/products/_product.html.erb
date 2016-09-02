@@ -1,16 +1,15 @@
 <div class="col-sm-12 col-md-6 col-lg-4">
   <div class="product-container">
+    
     <h3><%= product.name %></h3>
-    <div class="product-image">
-      <%= link_to product do %>
-         <%= image_tag(product.image_url, class: "img-responsive img-small") %>
-      <% end %>
+    <div class="price-container">
+    <span class="product-price">£<%= product.price %></span>
     </div>
+    <p>&nbsp;</p>
+      <%= link_to product do %>
+         <%= image_tag(product.image_url, class: "img-responsive product-image-small") %>
+      <% end %>
     <div class="product-description">
-        <span class="product-details"><strong>Colour:</strong>
-        <%= product.colour %>
-        <strong>Price: </strong>
-        £<%= product.price %></span>
     </div>
     <div class="product-actions"><%= link_to 'Show', product %> | <%= link_to 'Edit', 
       edit_product_path(product) %> | <%= link_to 'Destroy', product, 

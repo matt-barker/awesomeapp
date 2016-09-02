@@ -1,13 +1,14 @@
-<p id="notice"><%= notice %></p>
-
+<div class="featured-container">
+<h1>Featured Products</h1>
+<%= render 'static_pages/featured_products' %>
+<hr>
+</div>
+<div class="products-container">
 <h1>Products</h1>
-  
-  
-    <%= render @products %>
-  
-  <div>
-    <p>
+<%= render @products %>
+</div>
+<div>
+  <p>
     <%= button_to 'New Product', new_product_path, :type =>"button", :class =>"btn btn-default btn-new-product", :method => :get %>
   </p>
 </div>
-
