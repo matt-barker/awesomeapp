@@ -16,13 +16,15 @@
 <div class="product-description">
   <%= @product.description %>
 </div>
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 <hr>
 
 <p>
 <button class="btn btn-default" data-toggle="collapse" data-target="#comments">Comments&nbsp;<span class="caret"></span></button>
 <div id="comments" class="collapse">
-  <hr>
-<p>A placeholder for comments</p>
+<hr>
+<%= render 'new_comment' %>
+<%= render 'comments' %>
 </div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
