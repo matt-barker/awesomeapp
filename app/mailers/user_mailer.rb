@@ -8,4 +8,11 @@ class UserMailer < ApplicationMailer
         :subject => "A new contact form message from #{name}",
         :body => "Test")
     end
+    
+    def welcome(user)
+        @appname = "Awesome Gear"
+        mail( :to => user.email,
+        :subject => "Welcome to #{@appname}!",
+        :body => "Test")
+    end
 end
