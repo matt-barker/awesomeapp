@@ -6,13 +6,12 @@ class UserMailer < ApplicationMailer
         mail(:from => email,
         :to => 'matt@mattbarker.net',
         :subject => "A new contact form message from #{name}",
-        :body => "Test")
+        :body => @message)
     end
     
     def welcome(user)
         @appname = "Awesome Gear"
         mail( :to => user.email,
-        :subject => "Welcome to #{@appname}!",
-        :body => "Test")
+        :subject => "Welcome to #{@appname}!")
     end
 end
