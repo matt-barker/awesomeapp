@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'mailer@awesomegear.uk'
-  #layout 'mailer'
+  default from: 'matt@mattbarker.net'
+  
 end
 
