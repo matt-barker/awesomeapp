@@ -1,4 +1,5 @@
 <div class="col-sm-12 col-md-6 col-lg-4">
+  <%= link_to product do %>
   <div class="product-container">
     
     <h3><%= product.name %></h3>
@@ -11,9 +12,12 @@
       <% end %>
     <div class="product-description">
     </div>
+    <% if signed_in? && current_user.admin? %>
     <div class="product-actions"><%= link_to 'Show', product %> | <%= link_to 'Edit', 
       edit_product_path(product) %> | <%= link_to 'Destroy', product, 
       method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
+    <% end %>
     </div>
+    <% end %>
 </div>

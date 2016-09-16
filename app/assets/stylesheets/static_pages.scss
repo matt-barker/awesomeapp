@@ -1,3 +1,7 @@
+a :hover {
+    text-decoration: none;
+}
+
 .container {
     max-width: 1400px;
     margin-bottom: 20px;
@@ -79,11 +83,15 @@ footer {
 
 .hmenu {
     background: #2980b9;
+    color: #fff;
+   
 }
 
 .hmenu a, .hmenu a:visited {
     color: #fff;
 }
+
+
 
 .user-items {
     float: right;

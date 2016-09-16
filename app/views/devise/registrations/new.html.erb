@@ -6,6 +6,16 @@
         <%= devise_error_messages! %>
         <h2 class="form-signup-heading">Sign Up</h2>
         <div class="field">
+          <%= f.label :first_name %><br />
+          <%= f.text_field :first_name, class: "form-control", autofocus: true %>
+        </div>
+  
+        <div class="field">
+          <%= f.label :last_name %><br />
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+        
+        <div class="field">
           <label for="email_field" class="sr-only">Email address</label>
           <%= f.email_field :email, class: "form-control", autofocus: true, placeholder: "Email" %>
         </div>
