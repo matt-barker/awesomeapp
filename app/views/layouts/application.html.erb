@@ -44,7 +44,7 @@
             </ul>
         </li>
         <li>
-           <%= form_tag("/products/search", method: "get", class: "navbar-form navbar-right", role: "search") do %>
+           <%= form_tag(products_search_path, method: "get", class: "navbar-form navbar-right", role: "search") do %>
         <div class="form-group">
           <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
         </div>

@@ -9,6 +9,7 @@ class Ability
       can :manage, User, id: user.id
       can :create, Comment
       can :read, Product
+      can :search, Product
     end
     
   end

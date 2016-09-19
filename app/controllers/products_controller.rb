@@ -1,11 +1,20 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :authenticate_user!, :except => [:show, :index, :search]
   load_and_authorize_resource
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:q]
+      @search_term = params[:q]
+      if Rails.env == "development"
+        @products = Product.where("name LIKE ?", "%#{@search_term}%")
+      else
+        @products = Product.where("name ilike ?", "%#{@search_term}%")
+      end
+    else
+      @products = Product.all
+    end
   end
   
   def search
