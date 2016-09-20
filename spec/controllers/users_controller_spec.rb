@@ -17,7 +17,7 @@ describe UsersController, :type => :controller do
             end
             it 'should prevent user accessing another show' do
                 get :show, id: user2.id
-                expect(response).to redirect_to(root_url)
+                expect(response).to have_http_status(302)
             end
         end
     
