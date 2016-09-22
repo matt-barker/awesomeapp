@@ -2,6 +2,9 @@ class Product < ApplicationRecord
     has_many :orders
     has_many :comments
     
+    scope :price_desc, -> { order(price: :desc)  }
+    scope :price_asc, -> { order(price: :asc)  }
+    
     validates :name, presence: true
     
     def highest_rated_comment
