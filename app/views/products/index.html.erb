@@ -6,7 +6,9 @@
 <div class="products-container">
 
 <h1>Products</h1>
+<% cache(cache_key_for_products) do %>
 <%= render @products %>
+<% end %>
 </div>
 <div>
   <% if signed_in? && current_user.admin? %>

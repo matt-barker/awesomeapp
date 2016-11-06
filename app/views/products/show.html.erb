@@ -3,23 +3,31 @@
     <div class="panel-heading">
       <%= button_to 'Back', products_path, :class => "btn btn-default btn-back", :method=> :get %>
       <%= button_to '<', products_path, :class => "btn btn-default btn-back-small", :method=> :get %>
-      <h2><%= @product.name %></h2>
+      <% cache @product do %>
+        <h2><%= @product.name %></h2>
+      <% end %>
     </div>
-    <div class="panel-body">
+  <div class="panel-body">
 
 <div class="image-price-container">
-  <span class="product-price">£<%= @product.price %></span>
-  <%= image_tag(@product.image_url, class: "img-responsive product-image-large img-zoom", data_zoom_image: @product.image_url) %>
+  <% cache @product do %>
+    <span class="product-price">£<%= @product.price %></span>
+    <%= image_tag(@product.image_url, class: "img-responsive product-image-large img-zoom", data_zoom_image: @product.image_url) %>
+  <% end %>
 </div>
 <hr>
 
 <div class="product-description">
+  <% cache @product do %>
   <%= @product.description %>
+  <% end %>
 </div>
 <%= form_tag "/payments/create" do %>
   <%= render partial: 'shared/stripe_checkout_button' %>
 <% end %>
+<% cache @product do %>
 <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+<% end %>
 <hr>
 
 <p>
