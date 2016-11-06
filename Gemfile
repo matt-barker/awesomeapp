@@ -34,6 +34,8 @@ gem 'brakeman'
 
 gem 'dalli'
 
+gem 'memcachier'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
