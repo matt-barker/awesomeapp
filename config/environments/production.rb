@@ -89,4 +89,8 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
   
   config.action_mailer.default_url_options = { host: 'https://awesomegear.herokuapp.com/', port: 443 }
+  
+  config.web_socket_server_url = "wss://awesomegear.herokuapp.com/cable"
+  
+  config.action_cable.allowed_request_origins = ['https://awesomegear.herokuapp.com', 'http://awesomegear.herokuapp.com']
 end

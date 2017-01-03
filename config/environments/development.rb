@@ -40,4 +40,9 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  config.app_generators.javascript_engine = :javascript
+  
+  Rails.application.config.action_cable.allowed_request_origins = ['https://awesomeapp-skintt.c9users.io']
+  
 end

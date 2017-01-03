@@ -35,6 +35,7 @@
 <div id="comments" class="collapse">
 <hr>
 <%= render 'new_comment' %>
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 <%= render 'comments' %>
 </div>
 <% if signed_in? && current_user.admin? %>
