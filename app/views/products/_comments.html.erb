@@ -1,5 +1,6 @@
 <div class="product-reviews">
     <h2>Reviews</h2>
+    <div class="col-xs-12 alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
     <% @comments.each do |comment| %>
         <%= render partial: "comments/comment", locals: {
         comment: comment
