@@ -27,11 +27,11 @@
   <%= @product.description %>
 
 </div>
-
+<% if signed_in? %>
 <%= form_tag "/payments/create" do %>
   <%= render partial: 'shared/stripe_checkout_button' %>
 <% end %>
-
+<% end %>
 <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
 
 <hr>

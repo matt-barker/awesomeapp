@@ -45,4 +45,6 @@ Rails.application.configure do
   
   Rails.application.config.action_cable.allowed_request_origins = ['https://awesomeapp-skintt.c9users.io']
   
+  Rails.application.routes.default_url_options = {:host => 'localhost:3000' }
+  
 end
