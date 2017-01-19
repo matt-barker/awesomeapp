@@ -6,6 +6,7 @@ FactoryGirl.define do
         description "Test"
         image_url "example/1"
         price 499
+        colour "white"
     end
 
 end
