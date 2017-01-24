@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ProductsController, :type => :controller do
   
-  let(:user) { FactoryGirl.create(:user) }
+  let(:admin) { FactoryGirl.create(:admin) }
   
   context 'GET #index' do
     before do
@@ -22,7 +22,7 @@ describe ProductsController, :type => :controller do
 	describe 'POST #create' do
 		context 'Successful create' do	
 		    before do
-		    	sign_in user
+		    	sign_in admin
 		    	post :create, product: FactoryGirl.create(:product)
 		    end
 			it "redirects to the products index" do
@@ -34,7 +34,7 @@ describe ProductsController, :type => :controller do
 	describe 'PUT #update' do
 		context 'Successful update' do
 		    before do
-		    	sign_in user
+		    	sign_in admin
 		    	@product = FactoryGirl.create(:product)
 		    	patch :update, id: @product.id
 		    end
@@ -50,7 +50,7 @@ describe ProductsController, :type => :controller do
 				@product = FactoryGirl.create(:product)
 			end
 			it "redirects to products#index" do
-				sign_in user
+				sign_in admin
 	    		delete :destroy, id: @product.id
 	    		response.should redirect_to products_url
 			end
