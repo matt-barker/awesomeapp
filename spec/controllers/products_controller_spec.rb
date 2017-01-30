@@ -34,11 +34,13 @@ describe ProductsController, :type => :controller do
 	describe 'PUT #update' do
 		context 'Successful update' do
 		    before do
-		    	sign_in admin
+		    	
 		    	@product = FactoryGirl.create(:product)
-		    	patch :update, id: @product.id
+		    	
 		    end
 		    	it "redirects to the updated product" do
+		    		sign_in admin
+		    		patch :update, id: @product.id
 	    		response.should redirect_to @product
 	    	end
 	    end
